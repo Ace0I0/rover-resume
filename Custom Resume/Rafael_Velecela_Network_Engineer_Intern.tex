@@ -1,0 +1,64 @@
+% Network Engineer Intern resume; compile with pdflatex.
+\documentclass[11pt]{article}
+\usepackage[margin=1in,a4paper]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\input{t1lmr.fd}
+% Keep the same bold face at both heading and name sizes.
+\DeclareFontShape{T1}{lmr}{bx}{n}{<-> ec-lmbx10}{}
+\usepackage{titlesec}
+\titleformat{\section}{\normalsize\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{10pt}{4pt}
+\usepackage{enumitem}
+\setlist[itemize]{label=\textbullet,noitemsep,topsep=3pt,leftmargin=1.2em}
+\usepackage[hidelinks,bookmarks=false]{hyperref}
+\input{glyphtounicode}
+\pdfgentounicode=1
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+{\fontsize{14}{16}\selectfont\bfseries Rafael Velecela}\par
+\href{mailto:rafael.velecela04@gmail.com}{rafael.velecela04@gmail.com}, (727) 623-3083\par
+LinkedIn: \href{https://www.linkedin.com/in/rafael-velecela/}{linkedin.com/in/rafael-velecela}\par
+GitHub: \href{https://github.com/Ace0I0}{github.com/Ace0I0}
+
+\section*{Education}
+\textbf{University of South Florida}, Tampa, FL\par
+Bachelor of Science in Computer Science, Expected May 2027\par
+Cumulative GPA: 3.75/4.00\par
+Relevant Coursework: Trustworthy Infrastructure, Software Engineering, Algorithms
+
+\section*{Experience}
+\textbf{RAG Documentation Retrieval}\par
+Developer, Personal Project; October 2026--Present
+\begin{itemize}
+    \item Build a FastAPI semantic-search endpoint using Qwen embeddings and Qdrant to retrieve relevant documentation by question.
+    \item Configure two Docker Compose services with local ports, persistent storage, and \mbox{read-only} mounts to limit access.
+\end{itemize}
+
+\textbf{InCollege}\par
+Developer, Tester, and Scrum Master, Team Kansas; September 2026--Present
+\begin{itemize}
+    \item Implement COBOL file I/O and duplicate checks to retain up to 50 job applications per user across restarts.
+    \item Document seven sprints of COBOL features, file organization, and test procedures to help teammates run and verify the application.
+    \item Coordinate development and regression testing in a five-person Scrum team to verify data persistence and input validation.
+\end{itemize}
+
+\textbf{Artemis: Offline AI Voice Assistant}\par
+Developer, Personal Project; April 2026--Present
+\begin{itemize}
+    \item Set up and configure Raspberry Pi and ESP32 hardware with least-privilege MQTT access to support local sensor monitoring.
+    \item Automate Mosquitto provisioning and systemd service startup to make configuration and boot processes repeatable.
+    \item Organize technical documentation for account management, device setup, and troubleshooting to make procedures easier to follow.
+    \item Build an 18-prompt benchmark to evaluate local models for response accuracy, latency, and token throughput.
+    \item Run detail-oriented regression checks after updates to catch broken functionality; develop unit and integration tests to automate checks.
+\end{itemize}
+
+\section*{Skills}
+Systems and Tools: Ubuntu/WSL2, Raspberry Pi, ESP32, Docker, Docker Compose, Git\par
+Automation: Python, Bash, systemd services, MQTT account provisioning and access tests\par
+Applications and Protocols: MQTT, Mosquitto, FastAPI, Qdrant\par
+Programming: Python, C, COBOL
+
+\end{document}
