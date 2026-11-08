@@ -1,0 +1,85 @@
+%-------------------------
+% Rover Resume - Base Template
+% Original layout: https://github.com/subidit/rover-resume
+% Content customized without modifying the original 11pt font,
+% 1in/A4 page layout, section spacing, or list spacing.
+% Compile with pdflatex.
+%-------------------------
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in,a4paper]{geometry}
+\setcounter{secnumdepth}{0}
+\usepackage{titlesec}
+\titlespacing{\subsection}{0pt}{*0}{*0}
+\titlespacing{\subsubsection}{0pt}{*0}{*0}
+\titleformat{\section}{\large\bfseries\uppercase}{}{}{}[\titlerule]
+\titleformat*{\subsubsection}{\large\itshape}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,left=0pt .. \parindent}
+\pagestyle{empty}
+\usepackage[hidelinks,bookmarks=false]{hyperref}
+\pdfgentounicode=1
+
+\begin{document}
+
+\begin{center}
+    \begin{minipage}{0.5\textwidth}
+        {\Huge\bfseries
+            Rafael Velecela
+        } \\ \medskip
+    \end{minipage}\hfill
+    \begin{minipage}{0.4\textwidth}
+        \raggedleft
+        Email: \href{mailto:rafael.velecela04@gmail.com}{rafael.velecela04@gmail.com}\\
+        Mobile: (727) 623-3083\\
+        \makebox[\linewidth][r]{LinkedIn: \href{https://www.linkedin.com/in/rafael-velecela/}{linkedin.com/rafael-velecela}}\\
+        GitHub: \href{https://github.com/Ace0I0}{github.com/Ace0I0}
+    \end{minipage}
+\end{center}
+
+\section{Education}
+%=================%
+\subsection{University of South Florida $|$ {\normalfont\itshape B.S. in Computer Science} \hfill Expected May 2027}
+\begin{itemize}
+    \item Cumulative GPA: 3.75/4.00
+    \item Relevant Coursework: Algorithms, Trustworthy Infrastructure, Software Engineering
+\end{itemize}
+
+% Experience omitted because no employment or internship experience was reported.
+% Add an Experience section using the original double-line style when relevant.
+
+\section{Skills \& Interests}
+%===========================%
+\begin{description}[itemsep=0pt]
+    \item[Programming] Python, C, COBOL
+    \item[AI \& Data] Retrieval-augmented generation, semantic search, document embeddings, Agents, local LLM inference
+    \item[Tools] Ubuntu/WSL2, Git, GitHub, Docker, Docker Compose, FastAPI
+    \item[Hardware] Raspberry Pi
+    \item[Interests] Photography and videography; AI research; motorsport engineering and simulation; integrated hardware-software systems
+\end{description}
+
+\section{Projects}
+%=================%
+\subsection{RAG Documentation Retrieval $|$ {\normalfont\textit{\href{https://github.com/Ace0I0/RAG-Documentation-Retrieval}{GitHub}}} \hfill Ongoing}
+\begin{itemize}
+    \item Tech: Python, FastAPI, Qdrant, Docker, Docker Compose.
+    \item Built a FastAPI endpoint that queries Qdrant and returns vector-database collection metadata.
+    \item Defined a two-service Docker Compose stack with locally bound ports and persistent Qdrant storage.
+\end{itemize}
+
+\subsection{Artemis: Offline AI Voice Assistant $|$ {\normalfont\textit{\href{https://github.com/Ace0I0/Local_LM_testing/tree/project-testing}{GitHub}}} \hfill 2026}
+\begin{itemize}
+    \item Tech: Python, Raspberry Pi 5, Qwen 2.5, llama.cpp, SAM, MQTT, Mosquitto.
+    \item Built an offline-first assistant with fuzzy intent, topic, and severity routing plus token-budgeted knowledge selection for local inference.
+    \item Integrated authenticated, read-only MQTT sensor data with stale/offline validation and deterministic temperature and humidity answers.
+    \item Automated Mosquitto setup, least-privilege ACL provisioning, retained-message verification, and access-control tests.
+\end{itemize}
+
+\subsection{InCollege $|$ {\normalfont\textit{COBOL}} \hfill 2026}
+\begin{itemize}
+    \item Implemented local user-search functionality for a COBOL console application.
+    \item Validated teammates' features against expected behavior and identified functional issues.
+    \item Worked across Scrum Master, developer, and tester roles in a five-person Agile team.
+\end{itemize}
+
+\end{document}
